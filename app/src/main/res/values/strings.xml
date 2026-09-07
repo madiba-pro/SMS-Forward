@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">SMS Forward</string>
 
+    <string name="forwarding_notification_channel">Background forwarding</string>
+    <string name="forwarding_notification_title">SMS Forward is running</string>
+    <string name="forwarding_notification_text">Incoming messages will be forwarded in the background.</string>
+
     <!-- General -->
     <string name="key_include_destination">key_include_destination</string>
     <string name="header_general">General</string>
