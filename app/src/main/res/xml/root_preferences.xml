@@ -18,7 +18,8 @@
             android:title="@string/sender_filter_mode_title"
             android:entries="@array/sender_filter_mode_entries"
             android:entryValues="@array/sender_filter_mode_values"
-            android:defaultValue="off" />
+            android:defaultValue="off"
+            android:summary="%s" />
         <EditTextPreference
             android:key="@string/key_sender_filter_numbers"
             android:title="@string/sender_filter_numbers_title"
