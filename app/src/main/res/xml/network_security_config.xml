@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Raising targetSdkVersion to 34 (Android 14) makes Android block plain http:// traffic
+  by default. The "Forward via Web" feature lets the user point at any URL they choose,
+  including a local/dev server that may only speak http://, so we explicitly keep
+  cleartext allowed to avoid silently breaking that feature. Forwarding to Telegram
+  always uses https:// regardless of this setting.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

@@ -1,0 +1,89 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/header_general">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_include_destination"
+            android:title="@string/include_destination"
+            android:summary="@string/include_destination_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/header_filtering">
+
+        <ListPreference
+            android:key="@string/key_sender_filter_mode"
+            android:title="@string/sender_filter_mode_title"
+            android:entries="@array/sender_filter_mode_entries"
+            android:entryValues="@array/sender_filter_mode_values"
+            android:defaultValue="off" />
+        <EditTextPreference
+            android:key="@string/key_sender_filter_numbers"
+            android:title="@string/sender_filter_numbers_title"
+            android:summary="@string/sender_filter_numbers_summary"
+            android:defaultValue="" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/header_sms">
+
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:key="@string/key_enable_sms"
+            android:title="@string/enable_sms" />
+        <EditTextPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue=""
+            android:key="@string/key_target_sms"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/target_title_sms"
+            android:summary="@string/target_summary_sms" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_keep_sms_together"
+            android:title="@string/keep_sms_together"
+            android:summary="@string/keep_sms_together_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/header_telegram">
+
+        <SwitchPreference
+            android:key="@string/key_enable_telegram"
+            android:title="@string/enable_telegram" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="@string/key_target_telegram"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/target_title_telegram" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="@string/key_telegram_apikey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/title_telegram_apikey" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/header_web">
+
+        <SwitchPreference
+            android:key="@string/key_enable_web"
+            android:title="@string/enable_web" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="@string/key_target_web"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/target_title_web"
+            android:summary="@string/target_summary_web" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
